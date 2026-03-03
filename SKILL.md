@@ -61,8 +61,10 @@ description: |
 
 运行抽牌脚本获得真随机结果：
 ```bash
-python3 ~/.agents/skills/tarot/scripts/draw.py --spread <牌阵> --question "<问题>"
+python3 <skill_dir>/scripts/draw.py --spread <牌阵> --question "<问题>"
 ```
+
+其中 `<skill_dir>` 是本 SKILL.md 所在目录（`baseDir`），例如 `~/.agents/skills/tarot`。脚本内部通过 `__file__` 自动确定路径，无论安装在何处均可运行。
 
 牌阵参数：`single` | `three` | `diamond` | `moon` | `horseshoe` | `celtic`
 

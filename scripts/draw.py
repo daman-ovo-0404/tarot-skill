@@ -11,10 +11,16 @@
 import argparse
 import hashlib
 import json
+import os
 import random
 import sys
 import time
 from datetime import datetime
+from pathlib import Path
+
+# 脚本自身所在目录（不依赖调用路径，适配任意安装位置）
+SCRIPT_DIR = Path(__file__).resolve().parent
+SKILL_DIR = SCRIPT_DIR.parent
 
 # ─── 78 张牌定义（与 cards.md 标题完全一致） ───
 
